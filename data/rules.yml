@@ -1,0 +1,33 @@
+version: "2.0"
+
+rules:
+
+# - rule: Say goodbye anytime the user says goodbye
+#   steps:
+#   - intent: goodbye
+#   - action: utter_goodbye
+
+# - rule: Say 'I am a bot' anytime the user challenges
+#   steps:
+#   - intent: bot_challenge
+#   - action: utter_iamabot
+- rule: welcome user
+  conversation_start: true  # this rule only applies at the beginning of a conversation
+  steps:
+    - intent: greet
+    - action: utter_welcome
+- rule: warn about dry plant
+  steps:
+    - intent: EXTERNAL_dry_plant
+    - action: action_external
+- rule: Schedule a reminder
+  steps:
+  - intent: ask_remind_call
+    entities:
+    - person
+  - action: action_set_reminder
+
+- rule: Trigger `action_react_to_reminder` for `EXTERNAL_reminder`
+  steps:
+  - intent: EXTERNAL_reminder
+  - action: action_react_to_reminder
