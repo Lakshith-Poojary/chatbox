@@ -1,0 +1,57 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let"s go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: weather
+  examples: |
+    - what's the weather?
+    - what's the weather outside?
+    - whether now?
+    - is it raining now?
+    - what is climate out there?
+    - weather?
+    - whats the weather
+    - raining outside?
+    - is it cool today?
+- intent: Weather_location
+  examples: |
+    - what is the weather in [london](city)?
+    - what's the weather in [udupi](city)?
+    - what's the weather in [bengalur](city)?
+    - what's the weather in [Hydrebad](city)?
+    - what's the weather in [chennai](city)?
+    - what's the weather in [Argentina](city)?
+    - what's the weather in [Delhi](city)?
+    - whether in [Hydrebad](city) ?
+    - is it raining now in [kurnool](city)?
+    - what is climate out there in [mumbai](city)?
+    - weather in [ooty}(city)?
+    - whats the weather now in [mysore](city)
+    - raining outside in [guntur](city)?
+    - is it cool today in [Anantapur](city)?
+    - [Delhi](city)
+    - [bengaluru](city)
+    - [Hydrebad](city)
+    - [chennai](city)
+    - [Mumbai](city)
+    - [AUSTRALIA](city)
+- intent: ask_remind_call
+  examples: |
+    - remind me to call [John](person)
+    - later I have to call [Alan](person)
+    - Please, remind me to call [Vova](person)
+    - please remind me to call [Tanja](person)
+    - I must not forget to call [Juste](person)
