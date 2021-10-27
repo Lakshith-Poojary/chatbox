@@ -1,0 +1,57 @@
+version: "2.0"
+
+stories:
+
+- story: path1
+  steps:
+   - intent: ask_remind_call
+   - action: action_set_reminder
+
+- story: path10
+  steps:
+   - intent: EXTERNAL_reminder
+   - action: action_react_to_reminder
+   - intent: greet
+   - action: utter_greet
+   - intent: weather
+   - action: utter_ask location
+   - intent: Weather_location
+   - action: action_weather_1
+   - action: utter_thanks
+   - intent: goodbye
+   - action: utter_goodbye
+
+
+
+- story: path3
+  steps:
+   - intent: Weather_location
+   - action: action_weather_1
+   - action: utter_thanks
+   - intent: goodbye
+   - action: utter_goodbye
+
+- story: path4
+  steps:
+   - intent: weather
+   - action: utter_ask location
+   - intent: Weather_location
+   - action: action_weather_1
+   - action: utter_thanks
+ 
+- story: path5
+  steps:
+   - intent: weather
+   - action: utter_ask location
+   - intent: Weather_location
+   - action: action_weather_1
+ 
+- story: path6
+  steps:
+   - intent: weather
+   - action: utter_ask location
+   - intent: Weather_location
+   - action: action_weather_1
+   - action: utter_thanks
+   - intent: goodbye
+   - action: utter_goodbye
