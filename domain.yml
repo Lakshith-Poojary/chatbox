@@ -1,0 +1,91 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- ask_remind_call:
+    use_entities: true
+- EXTERNAL_reminder:
+    use_entities: true
+- EXTERNAL_dry_plant:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- Weather_location:
+    use_entities: true
+- weather:
+    use_entities: true
+entities:
+- person
+- plant
+- city
+slots:
+  person:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  plant:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+responses:
+  utter_greet:
+  - text: Hey! How may I assist YOU?!!!
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_corona:
+  - text: Novel Corona Virus is disease caused by the sars viruese
+  utter_city:
+  - text: which city you want to check for?
+<<<<<<< HEAD
+  utter_ask location:
+=======
+  utter_ask_location:
+>>>>>>> 024fc2c... chatbox commit
+  - text: what is the location
+  utter_bot_name:
+  - text: My Name AIBOT
+  utter_my_name:
+  - text: whats your name?
+  utter_mbl_number:
+  - text: whats your mobile number?
+  utter_thanks:
+  - text: Thanks for using bot, see ya next time!!!
+  utter_welcome:
+  - text: Hi there! What can I help you with today?
+  utter_warn_dry:
+  - text: Your {plant} needs some water!
+actions:
+- action_check_weather
+- action_weather_1
+- utter_city
+<<<<<<< HEAD
+- action_climate_api
+- action_react_to_reminder
+- action_set_reminder
+- action_external
+=======
+- action_weather
+- action_climate_api
+- action_react_to_reminder
+- action_set_reminderr
+- action_external
+- utter_ask_location
+>>>>>>> 024fc2c... chatbox commit
+forms: {}
+e2e_actions: []
