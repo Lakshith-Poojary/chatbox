@@ -14,7 +14,19 @@ stories:
    - intent: greet
    - action: utter_greet
    - intent: weather
+
    - action: utter_city
+   - action: utter_ask location
+   - intent: Weather_location
+   - action: action_weather_1
+   - action: utter_thanks
+   - intent: goodbye
+   - action: utter_goodbye
+
+
+
+- story: path3
+  steps:
    - intent: Weather_location
    - action: action_weather_1
    - action: utter_thanks
@@ -35,7 +47,7 @@ stories:
    - action: utter_city
    - intent: Weather_location
    - action: action_weather
- 
+
 - story: path6
   steps:
    - intent: weather

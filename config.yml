@@ -25,6 +25,7 @@ pipeline:
 #     threshold: 0.3
 #     ambiguity_threshold: 0.1
 
+
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/
 policies:
@@ -37,3 +38,4 @@ policies:
      max_history: 5
      epochs: 100
      constrain_similarities: true
+
