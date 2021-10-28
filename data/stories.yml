@@ -7,16 +7,10 @@ stories:
    - intent: ask_remind_call
    - action: action_set_reminder
 
-- story: path10
+- story: path3
   steps:
-   - intent: EXTERNAL_reminder
-   - action: action_react_to_reminder
-   - intent: greet
-   - action: utter_greet
-   - intent: weather
-   - action: utter_city
    - intent: Weather_location
-   - action: action_weather_1
+   - action: action_weather
    - action: utter_thanks
    - intent: goodbye
    - action: utter_goodbye
@@ -35,7 +29,7 @@ stories:
    - action: utter_city
    - intent: Weather_location
    - action: action_weather
- 
+
 - story: path6
   steps:
    - intent: weather

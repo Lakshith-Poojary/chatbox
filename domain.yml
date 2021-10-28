@@ -68,7 +68,6 @@ responses:
   - text: Your {plant} needs some water!
 actions:
 - action_check_weather
-- action_weather_1
 - utter_city
 - action_weather
 - action_climate_api
