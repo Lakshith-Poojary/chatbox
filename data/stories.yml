@@ -7,6 +7,7 @@ stories:
    - intent: ask_remind_call
    - action: action_set_reminder
 
+
 - story: path3
   steps:
    - intent: Weather_location
